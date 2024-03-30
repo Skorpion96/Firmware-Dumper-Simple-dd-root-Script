@@ -11,7 +11,7 @@ for partition in $(ls /dev/block/by-name); do
         continue
     fi
     
-    # Skip partitions with names like sda, sdb, sdc, sdd, sde
+    # Skip partitions with names like sda, sdb, sdc, sdd, sde, sdf
     if echo "$partition" | grep -qE '^(sda|sdb|sdc|sdd|sde|sdf)$'; then
         echo "Skipping $partition..."
         continue
